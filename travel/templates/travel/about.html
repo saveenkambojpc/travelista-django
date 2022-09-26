@@ -1,0 +1,51 @@
+{% extends 'travel/_base.html' %}
+{% load static %}
+
+{% block head %}
+<style>
+
+    .image-full {
+        background: rgba(0, 0, 0, 0.4) url({%static "travel/hero-bg.jpg"%});
+        height:60vh;
+       
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+</style>
+{% endblock head %}
+
+{% block content %}
+<div class="image-full text-white ">
+    <div class="content flex flex-col justify-center items-center h-full pt-16">
+        <h1 class=" text-white text-4xl md:text-5xl font-bold">
+            About Us
+        </h1>
+
+        <nav class="mt-5">
+            <ul class="flex space-x-3 items-center justify-center">
+                <li><a href="">Home</a></li>
+                <li><ion-icon name="arrow-forward-outline"></ion-icon></li>
+                <li><a href="/about" class="">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+
+<div class="container  md:mx-auto px-2 flex w-full  flex-wrap-reverse my-10 md:my-16">
+
+  
+  
+    <div class="img-wrapper md:w-1/2 w-full  mt-5">
+      <img src="{%static "travel/info-img.jpg"%}" alt="">
+    </div>
+
+    <div class="md:w-1/2 w-full flex flex-col justify-center px-5 md:px-10">
+        <h4 class="uppercase mt-5">About Us</h4>
+        <h5 class="uppercase mt-5 text-4xl font-semibold">WHO WE ARE?</h5>    
+        <p class="text-sm mt-5 text-[#777777] pr-10">Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+     
+      </div>
+  </div> 
+{% endblock content %}

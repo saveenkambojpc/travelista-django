@@ -1,0 +1,445 @@
+{% extends 'travel/_base.html' %} {% load static %} {% block head %}
+<title>Home Page</title>
+
+<style>
+  .image-full {
+    background: rgba(0, 0, 0, 0.4) url({%static "travel/hero-bg.jpg"%});
+    min-height: 100vh;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+
+  
+
+  .destination .desc:hover a {
+    visibility: visible;
+  }
+
+  .scale-skew:hover img{
+    transform: scale(1.08) rotate(-3deg);
+  }
+
+  .scale-skew:hover h4{
+    color:orange;
+
+  }
+</style>
+{% endblock head %} {% block content %}
+
+
+<div class="image-full text-white">
+  <div class="container flex items-center justify-center min-h-screen px-20">
+    <div id="banner-left" class="md:w-1/2 flex flex-col space-y-5 mt-10">
+      <h6 class="uppercase tracking-widest">Away from Monotonous Life</h6>
+      <h1 class="uppercase text-yellow-200 text-4xl md:text-6xl font-bold">
+        Magical Travel
+      </h1>
+      <p class="text-sm">
+        If you are looking at blank cassettes on the web, you may be very
+        confused at the difference in price. You may see some for as low as $.17
+        each
+      </p>
+
+      <button class="uppercase bg-yellow-500 px-5 py-2 text-white self-start">
+        Get Started
+      </button>
+    </div>
+    <div id="banner-right" class="md:w-1/2" class="w-full"></div>
+  </div>
+</div>
+
+
+
+
+<div class="md:mx-16 ">
+  <!-- Popular Destination-->
+  <div class="popular-destination">
+    <div class="my-20">
+      <h2 class="text-center text-4xl font-semibold my-2">
+        Popular Destination
+      </h2>
+      <p class="text-center font-light text-[#777777]">
+        We all live in an age that belongs to the young at heart. Life that is
+        becoming extremely fast, day.
+      </p>
+    </div>
+
+    <div class="flex justify-between flex-wrap px-2">
+      <div class="w-full mb-2 md:w-1/3 md:px-2">
+        <div class="destination relative">
+          <div class="thumb relative">
+            <img src="{%static "travel/d1.jpg"%}" class="w-full" alt="">
+          </div>
+          <div
+            class="desc absolute hover:bg-[rgba(32,32,32,0.4)] transition-all duration-300 z-10 top-0 h-full pt-20 text-white w-full text-center"
+          >
+            <a
+              href="#"
+              class="invisible price-btn bg-yellow-500 text-black px-6 py-1 font-bold"
+              >$150</a
+            >
+            <h4 class="text-xl mt-2 font-semibold">Mountain River</h4>
+            <p>Paraguay</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full mb-2 md:w-1/3 md:px-2 ">
+        <div class="destination relative border">
+          <div class="thumb relative">
+            <img src="{%static "travel/d2.jpg"%}" class="w-full" alt="">
+          </div>
+          <div
+            class="desc absolute hover:bg-[rgba(32,32,32,0.4)] transition-all duration-300 z-10 top-0 h-full pt-20 text-white w-full text-center"
+          >
+            <a
+              href="#"
+              class="invisible price-btn bg-yellow-500 text-black px-6 py-1 font-bold"
+              >$250</a
+            >
+            <h4 class="text-xl mt-2 font-semibold">Dream City</h4>
+            <p>Paris</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full mb-2 md:w-1/3 md:px-2 ">
+        <div class="destination relative border">
+          <div class="thumb relative">
+            <img src="{%static "travel/d3.jpg"%}" class="w-full" alt="">
+          </div>
+          <div
+            class="desc absolute hover:bg-[rgba(32,32,32,0.4)] transition-all duration-300 z-10 top-0 h-full pt-20 text-white w-full text-center"
+          >
+            <a
+              href="#"
+              class="invisible price-btn bg-yellow-500 text-black px-6 py-1 font-bold"
+              >$250</a
+            >
+            <h4 class="text-xl mt-2 font-semibold">Dream City</h4>
+            <p>Paris</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!--Destination Price-->
+  <div class="price">
+    <div class="my-20">
+      <h2 class="text-center text-4xl font-semibold my-2">
+        We Provide Affordable Prices
+      </h2>
+      <p class="text-center font-light text-[#777777]">
+        Well educated, intellectual people, especially scientists at all times
+        demonstrate considerably.
+      </p>
+    </div>
+  
+    <div class="price-row flex flex-wrap">
+
+
+      <div class="w-full md:w-1/3">
+        <div class="single-price mx-7">
+          <h4
+            class="text-center border-b border-yellow-500 font-semibold text-xl py-3"
+          >
+            Cheap Packages
+          </h4>
+          <ul class="price-list mt-7">
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Vietnam</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1200</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Maldivas</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1000</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Sri Lanka</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1200</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Singapore</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1100</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Thiland</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1000</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Nepal</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1100</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3">
+        <div class="single-price mx-7">
+          <h4
+            class="text-center border-b border-yellow-500 font-semibold text-xl py-3"
+          >
+            Luxury Packages
+          </h4>
+          <ul class="price-list mt-7">
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Toronto</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$2500</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Vancouver</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$2000</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">London</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1700</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Paris</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1800</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Las Vagas</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$2800</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Brampton</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1900</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3">
+        <div class="single-price mx-7">
+          <h4
+            class="text-center border-b border-yellow-500 font-semibold text-xl py-3"
+          >
+            Camping Packages
+          </h4>
+          <ul class="price-list mt-7">
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">New York</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1500</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Maldivas</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1500</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Sri Lanka</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1500</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Singapore</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1500</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Thiland</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1500</a
+              >
+            </li>
+            <li class="flex justify-between items-center mb-3">
+              <span class="text-[#777777] text-base">Nepal</span>
+              <a
+                href="#"
+                class="price-btn px-4 py-1 border hover:bg-yellow-500 hover:text-white font-semibold transition-all"
+                >$1500</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <!-- Other Services -->
+  <div class="other-services">
+    <div class="my-20">
+      <h2 class="text-center text-4xl font-semibold my-2">
+        Other issues we can help you with
+      </h2>
+      <p class="text-center font-light text-[#777777]">
+        We all live in an age that belongs to the young at heart. Life that is.
+      </p>
+    </div>
+
+    <div class="flex justify-between flex-wrap px-2 ">
+
+      
+      <div class=" w-full mb-2 w-1/2 md:w-1/4 px-2 md:px-4">
+        <div class="service relative scale-skew ">
+          <div class="thumb relative overflow-hidden">
+            <img src="{%static "travel/o1.jpg"%}" class="w-full transition-all duration-500 " alt="">
+          </div>
+
+          <div class="desc-service my-4">
+            <h4 class="text-xl font-semibold">Rent a Car</h4>
+            <p class="text-[#777777] mt-2 text-sm tracking-wider">The preservation of human life is the ultimate value, a pillar of ethics and the foundation.</p>
+          </div>
+        </div>
+      </div>
+      <div class=" w-full mb-2 w-1/2 md:w-1/4 px-2 md:px-4">
+        <div class="service relative scale-skew ">
+          <div class="thumb relative overflow-hidden">
+            <img src="{%static "travel/o2.jpg"%}" class="w-full transition-all duration-500 " alt="">
+          </div>
+
+          <div class="desc-service my-4">
+            <h4 class="text-xl font-semibold">Cruise Booking</h4>
+            <p class="text-[#777777] mt-2 text-sm tracking-wider">I was always somebody who felt quite sorry for myself, what I had not got compared.</p>
+          </div>
+        </div>
+      </div>
+
+       
+      <div class=" w-full mb-2 w-1/2 md:w-1/4 px-2 md:px-4">
+        <div class="service relative scale-skew ">
+          <div class="thumb relative overflow-hidden">
+            <img src="{%static "travel/o3.jpg"%}" class="w-full transition-all duration-500 " alt="">
+          </div>
+
+          <div class="desc-service my-4">
+            <h4 class="text-xl font-semibold">To Do List</h4>
+            <p class="text-[#777777] mt-2 text-sm tracking-wider">The following article covers a topic that has recently moved to center stage–at least it seems.</p>
+          </div>
+        </div>
+      </div>
+      <div class=" w-full mb-2 w-1/2 md:w-1/4 px-2 md:px-4">
+        <div class="service relative scale-skew ">
+          <div class="thumb relative overflow-hidden">
+            <img src="{%static "travel/o4.jpg"%}" class="w-full transition-all duration-500 " alt="">
+          </div>
+
+          <div class="desc-service my-4">
+            <h4 class="text-xl font-semibold">Food Feature</h4>
+            <p class="text-[#777777] mt-2 text-sm tracking-wider">There are many kinds of narratives and organizing principles. Science is driven by evidence.</p>
+          </div>
+        </div>
+      </div>
+
+
+  
+
+
+
+   
+
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- Not find your package-->
+<div class="request-custom-price  md:pl-20 flex items-center md:my-16 my-4 flex-wrap-reverse  px-5 md:px-0">
+  <div class="w-full md:w-1/2 flex flex-col space-y-5 mt-5 md:mt-0">
+    <div class="text-xl font-bold">
+      <h5>Did not find your Package?</h5>
+      <h5>Feel free to ask us.</h5>
+      <h5>We‘ll make it for you</h5>
+    </div>      
+    <p class="text-sm text-[#777777] pr-10">inappropriate behavior is often laughed off as “boys will be boys,” women face higherconduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyondreproach. inappropriate behavior is often laughed.</p>
+    <button class="self-start uppercase px-5 font-semibold py-2 bg-black text-sm text-white">
+      <a href="">Request Custom Price</a>
+    </button>
+  </div>
+
+
+  <div class="img-wrapper md:w-1/2">
+    <img src="{%static "travel/about-img.jpg"%}" alt="">
+  </div>
+</div> 
+
+
+
+  
+
+
+{% endblock content %} 
+
+
+
+{% block js %}
+<script>
+
+ 
+
+
+});
+
+</script>
+{% endblock js %}
